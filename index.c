@@ -2,14 +2,14 @@
 #include <stdlib.h>
 #include <time.h>
 
-
-
 int main(){
+    // Criação das variáveis.
     srand(time(NULL));
     int numeroAleatorio = rand() % 100 + 1;
     int numeroUsuario;
     int tentativa = 0;
-    //aprensentação do jogo
+
+    //aprensentação do jogo.
     printf("\n\n\nBem-vindo ao jogo de Adivinhha!\n\nTente adivinhar...");
 
     while (1)
@@ -18,6 +18,7 @@ int main(){
         printf("Digite um número de 1 a 100: ");
         scanf("%d",&numeroUsuario);
 
+        //verificação se o jogador ganhou.
         if (numeroUsuario == numeroAleatorio)
         {   
             printf("\nParabêns você acertou!\n");
@@ -25,6 +26,7 @@ int main(){
             break;
         }
 
+        //dica para o jogador.
         if (numeroUsuario > numeroAleatorio)
         {
             printf("\n\nO numero é menor que %d\n\n",numeroUsuario);
@@ -33,8 +35,7 @@ int main(){
         }
         
         continue;
-        
-        
+         
     }
     
     return 0;
